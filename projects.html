@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Previous Year Projects</title>
+
+<style>
+body{
+font-family: Arial;
+background:#1e1e1e;
+color:white;
+padding:40px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th,td{
+padding:15px;
+border-bottom:1px solid #444;
+text-align:left;
+}
+
+th{
+background:#333;
+}
+
+tr:hover{
+background:#2a2a2a;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>Previous Year Projects</h2>
+
+<table>
+
+<tr>
+<th>Year</th>
+<th>Student Name</th>
+<th>Project Title</th>
+<th>Technology</th>
+</tr>
+
+{% for p in projects %}
+
+<tr>
+<td>{{ p.year }}</td>
+<td>{{ p.student_name }}</td>
+<td>{{ p.project_title }}</td>
+<td>{{ p.technology }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>
